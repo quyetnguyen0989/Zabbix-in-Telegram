@@ -102,3 +102,10 @@ Such captions will be automatically cut to 200 symbols.
 
 #### Zabbix 3.0 
 https://github.com/ableev/Zabbix-in-Telegram/wiki/Working-with-Zabbix-3.0
+
+#### Debug
+```
+$ sudo -u zabbix ./zbxtg.py treovot *test* "$(echo -e 'zbxtg;graphs: \nzbxtg;graphs_period=3600\nzbxtg;itemid:32635\nzbxtg;title:test title')" --debug --markdow
+$ sudo -u zabbix grep -E 'zbx_(server|api)' ./zbxtg_settings.py
+$ zbxtg.py "treovot" "hello" "how are you ?" 
+
